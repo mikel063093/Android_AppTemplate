@@ -18,5 +18,11 @@
         <item>@string/description_1</item>
         <item>@string/description_1</item>
     </string-array>
-
+    <string name="_error">Error.</string>
+    <string name="play_services_no_avalible">Google play services not available in your phone please actuliza to solve this problem and then try again.</string>
+    <string name="interneterror">problems with your internet connection and try again verifies this.</string>
+    <string name="serverInternalError">Invalid data</string>
+    <string name="servererror">Maintenance server</string>
+    <string name="no_gps">Your provider gps is disabled</string>
+    <string name="progress_button_acepted">Accept</string>
 </resources>

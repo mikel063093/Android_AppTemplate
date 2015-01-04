@@ -1,9 +1,8 @@
 package co.mike.apptemplate.UI.Fragments;
 
 /**
- * Created by ${Mike} on 1/3/15.
+ * Created by ${Mike} on on ${DATE}.
  */
-
 import android.app.ProgressDialog;
 import android.location.Location;
 import android.support.v4.app.Fragment;

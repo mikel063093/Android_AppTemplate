@@ -6,6 +6,7 @@ import android.location.Location;
 import android.util.Log;
 
 import co.mike.apptemplate.Services.Location.LocationService;
+import co.mike.apptemplate.Services.Location.LocationUtils;
 
 /**
  * Created by ${Mike} on 1/3/15.
@@ -17,7 +18,12 @@ public class AppTemplate extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        startLocationService();
+        if (LocationUtils.isGpsAvalible(this)) {
+            startLocationService();
+        } else {
+            Log.e(TAG, "NO GPS");
+        }
+
     }
 
 
