@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/primary"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:weightSum="5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:id="@+id/ContainerProfile">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/loginPagerSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="4">
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:padding="2dip"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" />
+
+        <com.facebook.widget.LoginButton
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="@dimen/paddingSpaceLogin"
+            android:layout_marginRight="@dimen/paddingSpaceLogin"
+            android:id="@+id/authButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+
+            />
+
+        <TextView
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_marginBottom="1dp"
+            android:textColor="@color/clouds"
+            android:text="@string/fb_no_publish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

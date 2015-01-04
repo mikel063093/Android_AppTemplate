@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+
+
+    </style>
+
+    <style name="AppThemeFB" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="MyActionBarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/primary</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+
+
+
+
+        <!-- Support library compatibility -->
+
+        <item name="background">@color/primary</item>
+        <item name="windowActionBarOverlay">true</item>
+
+    </style>
+
+</resources>

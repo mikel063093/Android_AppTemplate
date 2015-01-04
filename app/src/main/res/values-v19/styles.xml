@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:actionBarStyle">@style/TranslucentActionBar</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+
+    </style>
+
+    <style name="TranslucentActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">@color/primaryDark</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="AppThemeFB" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+</resources>
