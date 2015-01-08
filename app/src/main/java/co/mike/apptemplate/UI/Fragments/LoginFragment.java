@@ -9,7 +9,6 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,6 +25,9 @@ import com.loopj.android.http.RequestParams;
 import com.viewpagerindicator.CirclePageIndicator;
 import com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer;
 
+import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.ViewById;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
@@ -34,24 +36,32 @@ import co.mike.apptemplate.FB.FBUtils;
 import co.mike.apptemplate.FB.onFacebookListener;
 import co.mike.apptemplate.R;
 import co.mike.apptemplate.UI.Fragments.SliderTABS.sliderImgAdapter;
-import co.mike.apptemplate.UI.MainActivity;
 import co.mike.apptemplate.Utils.ServerUtils.RESTCient;
 import co.mike.apptemplate.Utils.ServerUtils.URL;
 
 /**
  * Created by ${Mike} on 1/3/15.
  */
-public class Login extends BaseFragment implements onFacebookListener,
+@EFragment(R.layout.login_fragment)
+public class LoginFragment extends BaseFragment implements onFacebookListener,
         RESTCient.onResponseServer {
-    private static final int LAYOUT = R.layout.login_fragment;
+
     public static final String TAG = "LOGIN";
     FBUtils fbHelper;
     GraphUser user;
     Response response;
 
     sliderImgAdapter mAdapter;
-    public static ViewPager mPager;
+
+
+    @ViewById
     CirclePageIndicator indicator;
+
+    @ViewById
+    ViewPager loginPagerSlider;
+
+    @ViewById
+    LoginButton authButton;
 
     private Session.StatusCallback callback = new Session.StatusCallback() {
         @Override
@@ -78,18 +88,14 @@ public class Login extends BaseFragment implements onFacebookListener,
         uiHelper = new UiLifecycleHelper(getActivity(), callback);
     }
 
+
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(LAYOUT, container, false);
-//        Toolbar toolBar = (Toolbar) rootView.findViewById(R.id.login_toolbar);
-//        MainActivity.mainActivity.setSupportActionBar(toolBar);
-//        MainActivity.mainActivity.setTitle("");
-        mAdapter = new sliderImgAdapter(getActivity().getSupportFragmentManager(), getActivity());
-        indicator = (CirclePageIndicator) rootView.findViewById(R.id.indicator);
-        mPager = (ViewPager) rootView.findViewById(R.id.loginPagerSlider);
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         final float density = getResources().getDisplayMetrics().density;
         //indicator.setBackgroundColor(getResources().getColor(R.color.clouds));
+        mAdapter = new sliderImgAdapter(getActivity().getSupportFragmentManager(), getActivity());
         indicator.setRadius(8 * density);
         indicator.setPageColor(getResources().getColor(R.color.primary));
         indicator.setFillColor(getResources().getColor(R.color.clouds));
@@ -97,13 +103,13 @@ public class Login extends BaseFragment implements onFacebookListener,
         indicator.setStrokeWidth(2 * density);
         ParallaxPagerTransformer pt = new ParallaxPagerTransformer((R.id.LinarLayoutSlideImageRoot));
         pt.setSpeed(0.6f);
-        mPager.setPageTransformer(false, pt);
-        mPager.setAdapter(mAdapter);
+        loginPagerSlider.setPageTransformer(false, pt);
+        loginPagerSlider.setAdapter(mAdapter);
 
-        if (mPager != null) {
+        if (loginPagerSlider != null) {
             log(TAG, "Indicator");
 
-            indicator.setViewPager(mPager);
+            indicator.setViewPager(loginPagerSlider);
             indicator.setSnap(true);
 
             indicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -126,15 +132,9 @@ public class Login extends BaseFragment implements onFacebookListener,
             log(TAG, "No Indicator");
         }
 
-        return rootView;
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
         fbHelper = new FBUtils(this, getActivity());
         getKeyHash();
-        LoginButton authButton = (LoginButton) getActivity().findViewById(R.id.authButton);
+        authButton = (LoginButton) getActivity().findViewById(R.id.authButton);
         authButton.setReadPermissions(Arrays.asList("public_profile", "email", "user_friends"));
         authButton.setFragment(this);
 

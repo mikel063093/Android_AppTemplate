@@ -2,6 +2,8 @@
 <resources>
 
     <string name="app_name">AppTemplate</string>
+
+    <string name="maps_api_key"></string>
     <string name="facebook_app_id" translatable="false">YOUR-APP-ID</string>
     <string name="SENDERID" translatable="false">YOUR-GCM-SENDER-ID</string>
     <string name="title_activity_main">MainActivity</string>
@@ -9,15 +11,14 @@
     <string name="action_settings">Settings</string>
     <string name="fb_no_publish">We do not post anything on facebook.</string>
     <string name="loading">loading...</string>
-
     <string name="description_1">APP TEMPLATE By MIKE</string>
-
 
     <string-array name="ArrayDescription">
         <item>@string/description_1</item>
         <item>@string/description_1</item>
         <item>@string/description_1</item>
     </string-array>
+
     <string name="_error">Error.</string>
     <string name="play_services_no_avalible">Google play services not available in your phone please actuliza to solve this problem and then try again.</string>
     <string name="interneterror">problems with your internet connection and try again verifies this.</string>
@@ -25,4 +26,6 @@
     <string name="servererror">Maintenance server</string>
     <string name="no_gps">Your provider gps is disabled</string>
     <string name="progress_button_acepted">Accept</string>
+    <string name="title_activity_login">Login</string>
+
 </resources>

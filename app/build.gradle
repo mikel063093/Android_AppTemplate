@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion 21
@@ -22,6 +24,17 @@ android {
         mavenCentral()
     }
 }
+// https://github.com/excilys/androidannotations/wiki/FAQ
+// https://github.com/DayS/androidannotations/wiki/Building-Project-Gradle
+//https://bitbucket.org/hvisser/android-apt
+apt {// http://stackoverflow.com/a/26284580
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        // This should of course be your own package name
+        resourcePackageName 'co.mike.apptemplate'
+
+    }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -41,4 +54,12 @@ dependencies {
     compile 'de.greenrobot:eventbus:2.4.0'
     compile 'me.alexrs:wave-drawable:1.0.0'
     compile 'com.xgc1986.ParallaxPagerTransformer:library:0.2-SNAPSHOT@aar'
+    compile 'com.jakewharton:butterknife:6.0.0'
+
+    compile 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+    apt 'org.androidannotations:androidannotations:3.2'
+    compile 'org.androidannotations:androidannotations-api:3.2'
+
+    compile 'com.squareup.picasso:picasso:2.4.0'
+
 }

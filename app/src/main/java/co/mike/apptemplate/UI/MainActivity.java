@@ -15,7 +15,9 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import co.mike.apptemplate.R;
 import co.mike.apptemplate.Services.Location.LocationService;
 import co.mike.apptemplate.Services.Location.LocationUtils;
-import co.mike.apptemplate.UI.Fragments.Login;
+import co.mike.apptemplate.UI.Fragments.LoginFragment_;
+import co.mike.apptemplate.UI.Fragments.MapsFragment;
+import co.mike.apptemplate.UI.Fragments.MapsFragment_;
 import co.mike.apptemplate.Utils.PLayServicesUtils.PlayUtils;
 import co.mike.apptemplate.Utils.ServerUtils.RESTCient;
 
@@ -91,7 +93,7 @@ public class MainActivity extends ActionBarActivity {
         if (currentFragment != null && currentFragment.isVisible()) {
             Log.e(TAG, "currrentFragment isVisible");
         } else {
-            currentFragment = new Login();
+            currentFragment = new MapsFragment_();
             FragmentManager manager = getSupportFragmentManager();
             FragmentTransaction transaction = manager.beginTransaction();
             transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
