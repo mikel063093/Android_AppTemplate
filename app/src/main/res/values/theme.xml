@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Your custom THEME -->
-    <style name="AppTheme.Base" parent="Theme.AppCompat">
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="colorAccent">@color/accent</item>
-        <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="windowNoTitle">true</item>
         <item name="android:windowSoftInputMode">stateHidden</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
     </style>
 
 

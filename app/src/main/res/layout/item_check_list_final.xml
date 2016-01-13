@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:focusable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/list_row_selector"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:focusable="false"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+
+            <com.pkmmte.view.CircularImageView
+
+                android:layout_width="68dp"
+                android:layout_gravity="center"
+                android:layout_height="68dp"
+                android:id="@+id/imgProfileList"
+
+                app:border="true"
+                app:border_color="@color/primary"
+                app:border_width="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/TextDescriptionList"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="Description"
+                android:textSize="@dimen/customTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#80000000"
+                android:layout_gravity="center"
+                android:maxLines="3"
+                android:scrollbars="vertical" />
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/TextLocationList"-->
+            <!--android:textSize="@dimen/customTitle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Location"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:textColor="#80000000" />-->
+
+
+            <TextView
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:scrollbars="vertical"
+                android:layout_weight=".3"
+                android:id="@+id/TextNamePersonList"
+                android:textSize="@dimen/customMinTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Person name"
+                android:layout_gravity="center"
+                android:textColor="#80000000" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/containerCheck"
+            android:gravity="center_vertical">
+
+
+            <ImageView
+
+
+                android:layout_width="68dp"
+
+                android:layout_height="68dp"
+                android:layout_gravity="center"
+                android:id="@+id/imgCheckPointList"
+                android:background="@drawable/ic_launcher_web" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

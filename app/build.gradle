@@ -1,17 +1,19 @@
-apply plugin: 'com.android.application'
+
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.1"
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
 
     defaultConfig {
-        applicationId "co.mike.apptemplate"
-        minSdkVersion 16
-        targetSdkVersion 21
-        versionCode 1
-        versionName "1.0"
+        applicationId "co.ubi.checkponit"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 7
+        versionName "2.2"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -22,6 +24,7 @@ android {
     repositories {
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 }
 // https://github.com/excilys/androidannotations/wiki/FAQ
@@ -31,7 +34,7 @@ apt {// http://stackoverflow.com/a/26284580
     arguments {
         androidManifestFile variant.outputs[0].processResources.manifestFile
         // This should of course be your own package name
-        resourcePackageName 'co.mike.apptemplate'
+        resourcePackageName 'co.ubi.checkponit'
 
     }
 }
@@ -39,14 +42,21 @@ apt {// http://stackoverflow.com/a/26284580
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile 'com.android.support:appcompat-v7:21.0.2'
-    compile 'com.android.support:support-v4:21.+'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+//    compile 'com.android.support:support-v4:23.1.1'
     compile files('libs/com.mobandme.ada_v2.4.1.jar')
-    compile 'com.google.android.gms:play-services-base:6.5.+'
-    compile 'com.google.android.gms:play-services-maps:6.5.+'
-    compile 'com.google.android.gms:play-services-location:6.5.+'
-    compile 'com.afollestad:material-dialogs:0.4.4'
-    compile 'fr.avianey:facebook-android-api:+@aar'
+    //compile files('libs/nineoldandroids-2.4.0.jar')
+    compile 'com.google.android.gms:play-services-base:6.5.87'
+    compile 'com.google.android.gms:play-services-maps:6.5.87'
+    compile 'com.google.android.gms:play-services-location:6.5.87'
+//    compile 'com.afollestad:material-dialogs:0.4.6'
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.3@aar') {
+        transitive = true
+    }
+    compile ('fr.avianey:facebook-android-api:+@aar'){
+        exclude group: 'com.google.android', module: 'support-v4'
+        // othe
+    }
     compile 'com.pkmmte.view:circularimageview:1.1'
     compile 'com.koushikdutta.ion:ion:1.+'
     compile 'com.loopj.android:android-async-http:1.4.5'
@@ -54,12 +64,25 @@ dependencies {
     compile 'de.greenrobot:eventbus:2.4.0'
     compile 'me.alexrs:wave-drawable:1.0.0'
     compile 'com.xgc1986.ParallaxPagerTransformer:library:0.2-SNAPSHOT@aar'
-    compile 'com.jakewharton:butterknife:6.0.0'
 
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
     compile 'com.neenbedankt.gradle.plugins:android-apt:1.4'
     apt 'org.androidannotations:androidannotations:3.2'
     compile 'org.androidannotations:androidannotations-api:3.2'
 
     compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:support-v13:23.1.1'
+    compile 'com.sothree.slidinguppanel:library:+'
+    compile 'it.neokree:MaterialTabs:0.11'
+    compile 'me.grantland:autofittextview:0.2.0'
+   // compile 'br.com.liveo:navigationdrawer-material:1.1.0'
 
+
+    //compile 'com.melnykov:floatingactionbutton:1.1.0'
+
+    //compile 'com.sothree.slidinguppanel:library:+'
+
+    compile 'com.android.support:multidex:1.0.1'
 }
+

@@ -10,15 +10,62 @@
     android:minHeight="?attr/actionBarSize"
     android:background="@color/primary"
     android:fitsSystemWindows="true">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:layout_gravity="center"
-        android:text="APP TEMPLATE By MIKE"
-        android:textColor="@color/clouds"
-        android:id="@+id/toolbar_title" />
+        android:gravity="center_vertical"
+        android:minHeight="?attr/actionBarSize"
+        android:maxHeight="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:layout_marginLeft="48dp"
+
+
+        >
+
+    <com.pkmmte.view.CircularImageView
+        android:id="@+id/imgUserToolbar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:minHeight="?attr/actionBarSize"
+        android:maxHeight="?attr/actionBarSize"
+        android:src="@drawable/cat1"
+        android:layout_marginTop="3dp"
+
+        android:clickable="true"
+        app:border="true"
+        app:border_color="#ffff"
+        app:border_width="2dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="?attr/actionBarSize"
+        android:maxHeight="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Miguel"
+            android:textColor="@color/clouds"
+            android:id="@+id/toolbar_title"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/app_name"
+            android:textColor="@color/clouds"
+            android:id="@+id/toolbar_sbu_title" />
+
+    </LinearLayout>
+    </LinearLayout>
 
 
 </android.support.v7.widget.Toolbar>

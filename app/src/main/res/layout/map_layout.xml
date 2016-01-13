@@ -1,7 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:id="@+id/_map"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:background="@color/clouds"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar_map"
+        android:fitsSystemWindows="true" />
+
+
+
+
+    <co.ubi.checkponit.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/slidingLayout"
+        android:gravity="bottom"
+        app:shadowHeight="0dp"
+        app:paralaxOffset="@dimen/paralax_offset"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/toolbar_map"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/_map"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/slidingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/transparentView"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/map_height"
+                android:layout_alignParentTop="true" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/transparentView">
+
+                <ListView
+                    android:id="@+id/list"
+                    android:cacheColorHint="@android:color/white"
+                    android:drawSelectorOnTop="true"
+                    android:dividerHeight="@dimen/divider_height"
+                    android:divider="@android:color/darker_gray"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+    </co.ubi.checkponit.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <!--<ubicheckponit.melnykov.fab.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="72dp"-->
+        <!--android:layout_height="72dp"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--android:src="@drawable/ic_content_new"-->
+        <!--fab:fab_colorNormal="@color/primary"-->
+        <!--fab:fab_colorPressed="@color/midnight_blue"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginEnd="76dp"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
 
 </RelativeLayout>
+

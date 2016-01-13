@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:focusable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/list_row_selector"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusable="false"
+        android:background="#fff"
+        >
+
+        <com.pkmmte.view.CircularImageView
+            android:id="@+id/imgProfileList"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            app:border="true"
+            app:border_color="@color/primary"
+            app:border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="6"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/TextDescriptionList"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="Description"
+                android:textSize="@dimen/customEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#80000000"
+
+                />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/TextLocationList"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#80000000" />
+
+                    <TextView
+                        android:id="@+id/TextNamePersonList"
+                        android:textSize="@dimen/customTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Person name"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#80000000" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical"
+            android:layout_weight="4"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/containerCheck"
+            android:gravity="center_vertical">
+
+            <com.pkmmte.view.CircularImageView
+                android:id="@+id/imgCheckPointList"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginTop="5dp"
+
+                android:layout_gravity="center"
+
+                android:clickable="true"
+                app:border="true"
+                app:border_color="@color/primary"
+                app:border_width="2dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

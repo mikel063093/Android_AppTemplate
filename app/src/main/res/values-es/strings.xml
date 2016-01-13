@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Checkpoint</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="add_checkpoint">agregar un reten.</string>
+    <string name="add_photo">agregar un imagen (opcional).</string>
+    <string name="add_text">comentarios (opcional).</string>
+    <string name="fb_no_publish">No publicaremos nada en Facebook.</string>
+    <string name="interneterror">Problemas con tu conexion a internet.</string>
+    <string name="loading">Cargando..</string>
+    <string name="no_gps">Tu GPS esta desabilitado.</string>
+    <string name="progress_button_acepted">Aceptar.</string>
+    <string name="select">Selecciona.</string>
+    <string name="send">Enviar.</string>
+    <string name="serverInternalError">Datos invalidos.</string>
+    <string name="servererror">Servidor en mantenimiento.</string>
+    <string name="title_activity_login">Login</string>
+    <string name="your_location">tu ubicación</string>
+    <string name="retry">intentar de nuevo.</string>
+    <string name="cancel">Cancelar</string>
+    <string name="noti_title">nuevo check de </string>
+    <string name="noti_subtext">dirección</string>
+</resources>

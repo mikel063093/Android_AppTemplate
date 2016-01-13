@@ -1,31 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">AppTemplate</string>
-
-    <string name="maps_api_key"></string>
-    <string name="facebook_app_id" translatable="false">YOUR-APP-ID</string>
-    <string name="SENDERID" translatable="false">YOUR-GCM-SENDER-ID</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Checkpoint</string>
+    <string name="maps_api_key" translatable="false">AIzaSyA7x8UGLXpASCojM0vyB-3XYuRUjm-z7EI</string>
+    <string name="facebook_app_id" translatable="false">1547926975449815</string>
+    <string name="SENDERID" translatable="false">318590156740</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="fb_no_publish">We do not post anything on facebook.</string>
     <string name="loading">loading...</string>
-    <string name="description_1">APP TEMPLATE By MIKE</string>
+    <string name="description_1" translatable="false">Con checkpoint nunca más un retén será un problema</string>
 
     <string-array name="ArrayDescription">
         <item>@string/description_1</item>
         <item>@string/description_1</item>
-        <item>@string/description_1</item>
+
     </string-array>
 
-    <string name="_error">Error.</string>
-    <string name="play_services_no_avalible">Google play services not available in your phone please actuliza to solve this problem and then try again.</string>
+    <string name="_error" translatable="false">Error.</string>
+    <string name="play_services_no_avalible" translatable="false">Google play services not available in your phone please actuliza to solve this problem and then try again.</string>
     <string name="interneterror">problems with your internet connection and try again verifies this.</string>
     <string name="serverInternalError">Invalid data</string>
     <string name="servererror">Maintenance server</string>
     <string name="no_gps">Your provider gps is disabled</string>
     <string name="progress_button_acepted">Accept</string>
     <string name="title_activity_login">Login</string>
+    <string name="add_photo">add a photo (optional)</string>
+    <string name="add_text">add text (optional)</string>
+    <string name="add_checkpoint">add checkpoint</string>
+    <string name="send">send</string>
+    <string name="select">Select</string>
+    <string name="your_location">your location</string>
+    <string name="retry">retry</string>
+    <string name="cancel">cancel</string>
+    <string name="title_activity_app_main" translatable="false">app_main</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="noti_title">new check of</string>
+    <string name="noti_subtext">address:</string>
 
 </resources>
