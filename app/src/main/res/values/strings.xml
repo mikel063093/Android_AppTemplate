@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Checkpoint</string>
-    <string name="maps_api_key" translatable="false">AIzaSyA7x8UGLXpASCojM0vyB-3XYuRUjm-z7EI</string>
+    <string name="maps_api_key" translatable="false">AIzaSyCd45TvrBPl4Ehi2NulIP-wigrZ5tPqbqo</string>
     <string name="facebook_app_id" translatable="false">1547926975449815</string>
     <string name="SENDERID" translatable="false">318590156740</string>
     <string name="title_activity_main" translatable="false">MainActivity</string>
